@@ -1,16 +1,21 @@
 ---
 
+import '../styles/global.css'  
+import { Hero } from '@/components/hero'
+import { WorkExperience } from '@/components/work-experience'
+import { Projects } from '@/components/projects'
+import { BlogPosts } from '@/components/blog-posts'
+import Layout from '../layout/base.astro'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+    <div class="min-h-screen bg-background w-screen">
+
+      <main class="mx-auto max-w-5xl px-4 py-6 md:px-6 md:py-8">
+        <Hero client:load />
+        <WorkExperience client:load/>
+        <Projects client:load />
+        <BlogPosts client:load />
+      </main>
+    </div>
+</Layout>
