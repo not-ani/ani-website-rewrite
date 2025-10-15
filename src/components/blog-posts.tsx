@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const blogPosts = [
   {
-    title: "You have to do it yourself",
+    title: "You have to be willing to do it yourself",
     excerpt: "",
     date: "Oct 13, 2025",
     readTime: "2 min read",

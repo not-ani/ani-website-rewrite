@@ -1,5 +1,5 @@
 ---
-title: You have to do it yourself
+title: You have to be willing to do it yourself
 
 layout: ../../layout/blog.astro
 ---
