@@ -13,6 +13,13 @@ const blogPosts = [
     readTime: "2 min read",
     link: "/writing/do-it-yourself",
   },
+  {
+    title: "OCW is Changing",
+    excerpt: "",
+    date: "Oct 15, 2025",
+    readTime: "2 min read",
+    link: "/writing/ocw-is-changing",
+  },
 ];
 
 export function BlogPosts() {
