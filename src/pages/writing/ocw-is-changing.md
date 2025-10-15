@@ -64,7 +64,7 @@ We then updated all of our convex functions to incorporate this school field.
 
 ### Multi-tenant Architecture
 
-Next we wanted to update the application itself to support a multi-tenant architecture, next thankfully makes this super easy! We started with our1 middleware:
+Next we wanted to update the application itself to support a multi-tenant architecture, next thankfully makes this super easy! We started with our middleware:
 
 ```tsx
 import { clerkMiddleware } from "@clerk/nextjs/server";
@@ -216,4 +216,4 @@ export default async function Page() {
 }
 ```
 
-Those are the high level things we did migrate. There were obviosuly mroe things like migrating marketing pages to be dynamic. You can free to go to <https://github.com/not-ani/ocw-rewrite> and look through our commit history to get a sense of how the migration went.
+Those are the high level things we did migrate. There were obviously more things like migrating marketing pages to be dynamic. You can free to go to <https://github.com/not-ani/ocw-rewrite> and look through our commit history to get a sense of how the migration went.
