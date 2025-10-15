@@ -36,7 +36,7 @@ Honestly, not long after CreekOCW started taking off, I knew I wanted to expand 
 
 The assumption was that each school would independently create its own OpenCourseWare site by forking our codebase and hosting it themselves. This model seemed promising at first for a few reasons. It allowed for local and tailored content which is something we didn’t want to compromise on. It also gave students full autonomy over the creation and maintenance of their platforms. And, admittedly, it meant less direct work for me. I’d just maintain a centralized site while developers at each school managed their own forks, merging updates as needed.
 
-However, I quickly realized the technical barriers were too high. While a few schools successfully forked the code and launched their own versions, the need for a dedicated technical lead non trivial. Ultimately, maintaining these independent sites would have fallen back on me and, eventually, the core OCW Project team. So that third supposed benefit, less work, wasn’t really true at all.
+However, I quickly realized the technical barriers were too high. While a few schools successfully forked the code and launched their own versions, the need for a dedicated technical lead was non-trivial. Ultimately, maintaining these independent sites would have fallen back on me and, eventually, the core OCW Project team. So that third supposed benefit, less work, wasn’t really true at all.
 
 After a lot of discussion with friends and collaborators, we decided a better approach would be to move toward a **multi-tenant architecture**. This would let students create, manage, and update their own school’s open courseware, all without ever touching the code.
 
