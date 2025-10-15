@@ -15,30 +15,32 @@ const { frontmatter } = Astro.props;
   </head>
 
   <body
-    class="min-h-screen w-screen bg-background text-foreground overflow-x-hidden font-mono"
+    class="min-h-screen bg-background text-foreground font-mono"
   >
-    <main class="flex flex-col min-h-screen items-center justify-center px-6 py-6">
-      <header
-        class="relative flex w-full max-w-3xl items-center justify-center border-b border-border pb-4 pt-8 mb-8"
-      >
-        <Button
-          variant="ghost"
-          client:load
-          className="absolute left-0"
+    <main class="flex flex-col min-h-screen items-center justify-start py-6">
+      <div class="w-full max-w-3xl px-4 sm:px-6">
+        <header
+          class="relative flex w-full items-center justify-center border-b border-border pb-4 pt-8 mb-8"
         >
-          <a href="/" class="no-underline text-foreground hover:text-primary font-mono">
-            Go Home
-          </a>
-        </Button>
+          <Button
+            variant="ghost"
+            client:load
+            className="absolute left-0 shrink-0"
+          >
+            <a href="/" class="no-underline text-foreground hover:text-primary font-mono text-sm sm:text-base">
+              Go Home
+            </a>
+          </Button>
 
-        <h1 class="text-2xl font-semibold tracking-tight text-center  font-mono">
-          {frontmatter.title}
-        </h1>
-      </header>
+          <h1 class="text-lg sm:text-2xl font-semibold tracking-tight text-center font-mono px-20 sm:px-0">
+            {frontmatter.title}
+          </h1>
+        </header>
 
-      <Prose class="max-w-3xl w-full">
-        <slot />
-      </Prose>
+        <Prose class="w-full">
+          <slot />
+        </Prose>
+      </div>
     </main>
   </body>
 </html>
