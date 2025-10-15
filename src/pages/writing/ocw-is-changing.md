@@ -46,6 +46,8 @@ Here’s what it looks like:
 
 ![image.png](https://moltmqa28u.ufs.sh/f/0q2U2s5hTRxUBsvIlPWE0uwnJQ2oYcWqd8sOyV4hG3BM1bjS)
 
+We would make taking content from one school’s OCW to another trivial, like GitHub-style forking, which would allow students to iterate faster while maintaining autonomy over their own content.
+
 ## Technical Writeup
 
 I am the point where I’ll be loosing 90% of you guys but this is how we migrated.
