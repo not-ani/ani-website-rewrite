@@ -1,22 +1,24 @@
-import type { APIRoute, GetStaticPaths } from 'astro';
-import { ImageResponse } from '@vercel/og';
+import type { APIRoute, GetStaticPaths } from "astro";
+import { ImageResponse } from "@vercel/og";
 
 // Define the blog posts data
 const blogPosts = [
   {
-    slug: 'do-it-yourself',
-    title: 'You have to be willing to do it yourself',
-    description: 'Reflections on leadership and the importance of understanding every aspect of your organization.',
+    slug: "do-it-yourself",
+    title: "You have to be willing to do it yourself",
+    description:
+      "Reflections on leadership and the importance of understanding every aspect of your organization.",
   },
   {
-    slug: 'using-ai',
-    title: 'Using AI To Learn',
-    description: 'How junior engineers should approach AI tools while still building genuine expertise.',
+    slug: "using-ai",
+    title: "Learning in the Age of Agents",
+    description: "How we can use AI tools while still learning.",
   },
   {
-    slug: 'ocw-is-changing',
-    title: 'OCW is Changing',
-    description: 'Announcing the transition to a multi-tenant architecture for OpenCourseWare.',
+    slug: "ocw-is-changing",
+    title: "OCW is Changing",
+    description:
+      "Announcing the transition to a multi-tenant architecture for OpenCourseWare.",
   },
 ];
 
@@ -35,25 +37,25 @@ export const GET: APIRoute = async ({ props }) => {
   const { post } = props as Props;
 
   const html = {
-    type: 'div',
+    type: "div",
     props: {
-      tw: 'w-full h-full flex flex-col items-center justify-center px-20',
+      tw: "w-full h-full flex flex-col items-center justify-center px-20",
       style: {
-        background: 'linear-gradient(to bottom, #0a0a0a, #1a1a1a)',
-        fontFamily: 'monospace',
+        background: "linear-gradient(to bottom, #0a0a0a, #1a1a1a)",
+        fontFamily: "monospace",
       },
       children: [
         {
-          type: 'div',
+          type: "div",
           props: {
-            tw: 'flex flex-col items-center justify-center max-w-4xl',
+            tw: "flex flex-col items-center justify-center max-w-4xl",
             children: [
               {
-                type: 'div',
+                type: "div",
                 props: {
-                  tw: 'text-6xl font-bold text-white text-center leading-tight',
+                  tw: "text-6xl font-bold text-white text-center leading-tight",
                   style: {
-                    fontFamily: 'monospace',
+                    fontFamily: "monospace",
                   },
                   children: post.title,
                 },
@@ -70,4 +72,3 @@ export const GET: APIRoute = async ({ props }) => {
     height: 630,
   });
 };
-
