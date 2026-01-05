@@ -14,11 +14,11 @@ const blogPosts = [
     link: "/writing/do-it-yourself",
   },
   {
-    title: "OCW is Changing",
+    title: "Using AI To Learn",
     excerpt: "",
-    date: "Oct 15, 2025",
-    readTime: "2 min read",
-    link: "/writing/ocw-is-changing",
+    date: "Jan 4, 2026",
+    readTime: "4-5 min read",
+    link: "/writing/using-ai",
   },
 ];
 

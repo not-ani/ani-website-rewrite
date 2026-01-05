@@ -1,6 +1,6 @@
 ---
 title: OCW is Changing
-
+description: Announcing the transition to a multi-tenant architecture for OpenCourseWare.
 layout: ../../layout/blog.astro
 ---
 

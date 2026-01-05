@@ -1,6 +1,6 @@
 ---
 title: You have to be willing to do it yourself
-
+description: Reflections on leadership and the importance of understanding every aspect of your organization.
 layout: ../../layout/blog.astro
 ---
 

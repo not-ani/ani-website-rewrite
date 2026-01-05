@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.anikethchenjeri.com/sitemap-index.xml
+

@@ -33,22 +33,6 @@ const projects = [
     tags: ["Go", "CLI"],
     link: "https://github.com/not-ani/fcopy",
   },
-  {
-    title: "Operating System in C",
-    description:
-      "Developed a RISC-V operating system from scratch in C and Assembly, implementing process scheduling, file system I/O, memory allocation, kernel panic handling, and system calls. Documented system architecture using virtualization and emulator testing.",
-    image: "/images/os-c.png",
-    tags: ["C", "Assembly", "Systems Programming"],
-    link: "#",
-  },
-  {
-    title: "Machine Learning from Scratch",
-    description:
-      "Built machine learning algorithms from scratch in C, including regression models, k-NN classifiers, and gradient descent optimization. Conducted in-depth analyses of algorithmic behavior and visualized gradient landscapes to illustrate underlying math.",
-    image: "/images/ml-scratch.png",
-    tags: ["C", "Python", "Statistics", "Machine Learning"],
-    link: "#",
-  },
 ];
 
 export function Projects() {

@@ -4,14 +4,42 @@ import { Button } from '@/components/ui/button';
 import Prose from '../components/prose.astro';
 
 const { frontmatter } = Astro.props;
+const title = frontmatter.title || 'Aniketh Chenjeri';
+const description = frontmatter.description || `Read ${title} by Aniketh Chenjeri`;
+const siteUrl = Astro.site?.href?.replace(/\/$/, '') || Astro.url.origin;
+const pathname = Astro.url.pathname.replace(/\/$/, '');
+const ogImageUrl = `${siteUrl}${pathname}/og.png`;
+const canonicalUrl = `${siteUrl}${pathname}/`;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="generator" content={Astro.generator} />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{frontmatter.title ? `${frontmatter.title}` : 'Aniketh Chenjeri'}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Aniketh Chenjeri" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
   </head>
 
   <body
@@ -37,7 +65,7 @@ const { frontmatter } = Astro.props;
           </h1>
         </header>
 
-        <Prose class="w-full">
+        <Prose class="w-full prose prose-neutral list-outside">
           <slot />
         </Prose>
       </div>
