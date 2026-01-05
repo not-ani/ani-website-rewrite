@@ -1,5 +1,5 @@
 ---
-title: Using AI To Learn
+title: Learning in the Age of Agents
 description: How we can use AI tools while still learning.
 layout: ../../layout/blog.astro
 ---
