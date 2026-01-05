@@ -7,7 +7,7 @@ import { rehypeHeadingIds } from "@astrojs/markdown-remark";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'http://localhost:4321',
+  site: "https://www.anikethchenjeri.com",
   integrations: [react()],
 
   markdown: {
@@ -18,4 +18,3 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 });
-
