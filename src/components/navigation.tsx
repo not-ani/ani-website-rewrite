@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 export function Navigation() {
@@ -49,33 +50,50 @@ export function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-sm">
+    <motion.nav
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-sm"
+    >
       <div className="mx-auto max-w-4xl px-6 md:px-8">
         <div className="flex h-16 items-center justify-between">
-          <button
+          <motion.button
             onClick={() => scrollToSection("hi")}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.2 }}
             className="font-mono text-sm font-medium tracking-tight transition-colors hover:text-foreground/80"
           >
             Portfolio
-          </button>
+          </motion.button>
           <div className="flex gap-1">
-            {navItems.map((item) => (
-              <button
+            {navItems.map((item, index) => (
+              <motion.button
                 key={item.id}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.4,
+                  ease: [0.22, 1, 0.36, 1],
+                  delay: 0.1 + index * 0.05,
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
                 className={cn(
-                  "px-4 py-2 text-sm font-mono transition-colors rounded-sm",
+                  "px-4 py-2 text-sm font-mono transition-all rounded-sm",
                   activeSection === item.id
                     ? "bg-foreground text-background"
                     : "text-muted-foreground hover:text-foreground hover:bg-muted/50",
                 )}
               >
                 {item.label}
-              </button>
+              </motion.button>
             ))}
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   )
 }
