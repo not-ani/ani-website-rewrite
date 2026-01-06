@@ -48,7 +48,7 @@ Yet, I'd argue I would still be missing a key part of the learning process, even
 
 This brings me to my second point:
 
-(2) When trying to learn something new work on projects that are purely meant to be technical exercises. This can be done in more low stakes environments like personal projects.
+(2) When trying to learn something new, work on projects purely as technical exercises.
 
 Prior to LLMs became ubiquitous in the developer world, juniors building things would gain experience by spending hours making mistakes and overcoming challenges independently; I don’t think there's a way around that: we still have to build things just to learn and not to ship.
 
@@ -57,7 +57,7 @@ Good projects are often projects that solve problems, especially ones that you h
 I recently have found myself wanting to replace the native MacOS file explorer with something better. I also have been wanting to work more with Rust.
 I needed the better file explorer to use ASAP, so I built it with Tauri and React. My React skills are considerably better than my Rust skills so this allowed me to use agents to build a pretty decent file explorer quickly.
 
-After I had built a working product there I went back and wrote a version of the project purely in Rust. This version took 10x longer to build, but I learned so much more from it.
+After I had built a working product, I went back and wrote a version of the project purely in Rust. This version took 10x longer to build, but I learned so much more from it.
 
 When building these projects by myself, I still use AI, but with a few guidelines that make it possible to use LLMs effectively when learning:
 
@@ -66,7 +66,7 @@ When building these projects by myself, I still use AI, but with a few guideline
 
 # Footnotes
 
-[1] Declining student writing quality is not a new problem and my claim here is largely anecdotal. It isn't completely unfounded however; Here is a report from the National Association of Scholars that discusses this problem from 2013 ([Carter and Harper 13](http://nas.org/academic-questions/26/3/student_writing_strategies_to_revers_ongoing_decline-2)). We also have some empirical evidence that LLMs are uniquely worsening this problem. A large-scale longitudinal analysis (2025) by the University of Warwick examined 4,820 student reports from 2016 to 2025. It found that since the launch of ChatGPT, student writing has become significantly more formal and "positive" in tone, regardless of the topic. Students are becoming less critical and less likely to develop a unique, persuasive, or authentic writing style ([Mak and Walasek 25](https://wrap.warwick.ac.uk/id/eprint/195006/1/1-s2.0-S2666920X2500147X-main.pdf)). This also supports my point that more and more students are using AI in their classes.
+[1] Declining student writing quality is not a new problem, and my claim that many students haven’t written essays unassisted in years is largely anecdotal; however, it isn’t completely unfounded. A 2013 report from the National Association of Scholars discusses this issue ([Carter and Harper 13](http://nas.org/academic-questions/26/3/student_writing_strategies_to_revers_ongoing_decline-2)). More recent empirical evidence suggests that large language models (LLMs) may be uniquely worsening this problem. A large-scale longitudinal analysis (2025) by the University of Warwick examined 4,820 student reports written between 2016 and 2025. It found that, since the launch of ChatGPT, student writing has become significantly more formal and more “positive” in tone, regardless of topic. While those traits might seem like improvements, the study’s authors found that this shift reflects a decrease in critical engagement and originality. Students are writing in a style that mirrors AI-generated text. In other words, as students increasingly rely on AI to assist with writing, their work becomes less personally expressive and less persuasive, suggesting that these tools are not just changing how students write but also eroding their ability to think and argue independently ([Mak and Walasek 25](https://wrap.warwick.ac.uk/id/eprint/195006/1/1-s2.0-S2666920X2500147X-main.pdf)).
 
 [2] I use the word "implement" and not "understand" very intentionally.
 You don't truly understand something until you can implement it. Just
