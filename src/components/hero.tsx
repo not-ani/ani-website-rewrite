@@ -13,7 +13,7 @@ export function Hero() {
           className="space-y-1"
         >
           <h1 className="font-mono text-3xl font-bold tracking-tight text-balance md:text-4xl">
-            Hi, I'm <span className="text-blue-500">Ani</span>
+            Hi, I'm <span className="text-blue-500 dark:text-blue-400">Ani</span>
           </h1>
           <p className="font-mono text-base text-muted-foreground md:text-lg">
             Student and Developer

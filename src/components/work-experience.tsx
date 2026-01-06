@@ -74,7 +74,7 @@ export function WorkExperience() {
                         href={exp.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-mono text-sm font-medium hover:text-foreground/80 transition-colors duration-200 text-blue-500 underline"
+                        className="font-mono text-sm font-medium hover:text-foreground/80 transition-colors duration-200 text-blue-500 dark:text-blue-400 underline"
                         onClick={(e) => e.stopPropagation()}
                       >
                         {exp.company}

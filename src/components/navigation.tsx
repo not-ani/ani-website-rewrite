@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
+import { ModeToggle } from "@/components/mode-toggle"
 
 export function Navigation() {
   const [activeSection, setActiveSection] = useState("hi")
@@ -67,30 +68,43 @@ export function Navigation() {
           >
             Portfolio
           </motion.button>
-          <div className="flex gap-1">
-            {navItems.map((item, index) => (
-              <motion.button
-                key={item.id}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.4,
-                  ease: [0.22, 1, 0.36, 1],
-                  delay: 0.1 + index * 0.05,
-                }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection(item.id)}
-                className={cn(
-                  "px-4 py-2 text-sm font-mono transition-all rounded-sm",
-                  activeSection === item.id
-                    ? "bg-foreground text-background"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50",
-                )}
-              >
-                {item.label}
-              </motion.button>
-            ))}
+          <div className="flex items-center gap-2">
+            <div className="flex gap-1">
+              {navItems.map((item, index) => (
+                <motion.button
+                  key={item.id}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.4,
+                    ease: [0.22, 1, 0.36, 1],
+                    delay: 0.1 + index * 0.05,
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => scrollToSection(item.id)}
+                  className={cn(
+                    "px-4 py-2 text-sm font-mono transition-all rounded-sm",
+                    activeSection === item.id
+                      ? "bg-foreground text-background"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50",
+                  )}
+                >
+                  {item.label}
+                </motion.button>
+              ))}
+            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.4,
+                ease: [0.22, 1, 0.36, 1],
+                delay: 0.3,
+              }}
+            >
+              <ModeToggle />
+            </motion.div>
           </div>
         </div>
       </div>

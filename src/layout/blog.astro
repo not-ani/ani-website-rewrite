@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import { Button } from '@/components/ui/button';
 import Prose from '../components/prose.astro';
+import { ThemeProvider } from '@/components/theme-provider';
+import { ModeToggle } from '@/components/mode-toggle';
 
 const { frontmatter } = Astro.props;
 const title = frontmatter.title || 'Aniketh Chenjeri';
@@ -17,13 +19,13 @@ const canonicalUrl = `${siteUrl}${pathname}/`;
     <meta charset="utf-8" />
     <meta name="generator" content={Astro.generator} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Primary Meta Tags -->
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article" />
     <meta property="og:url" content={canonicalUrl} />
@@ -33,42 +35,72 @@ const canonicalUrl = `${siteUrl}${pathname}/`;
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Aniketh Chenjeri" />
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={canonicalUrl} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
+
+    <script is:inline>
+      const getThemePreference = () => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      };
+
+      const theme = getThemePreference();
+      const isDark = theme === 'dark';
+      document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+
+      if (typeof localStorage !== 'undefined') {
+        const observer = new MutationObserver(() => {
+          const isDark = document.documentElement.classList.contains('dark');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+        observer.observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ['class']
+        });
+      }
+    </script>
   </head>
 
   <body
     class="min-h-screen bg-background text-foreground font-mono"
   >
-    <main class="flex flex-col min-h-screen items-center justify-start py-6">
-      <div class="w-full max-w-3xl px-4 sm:px-6">
-        <header
-          class="relative flex w-full items-center justify-center border-b border-border pb-4 pt-8 mb-8"
-        >
-          <Button
-            variant="ghost"
-            client:load
-            className="absolute left-0 shrink-0"
+    <ThemeProvider client:load attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+      <main class="flex flex-col min-h-screen items-center justify-start py-6">
+        <div class="w-full max-w-3xl px-4 sm:px-6">
+          <header
+            class="relative flex w-full items-center justify-center border-b border-border pb-4 pt-8 mb-8"
           >
-            <a href="/" class="no-underline text-foreground hover:text-primary font-mono text-sm sm:text-base">
-              Go Home
-            </a>
-          </Button>
+            <Button
+              variant="ghost"
+              client:load
+              className="absolute left-0 shrink-0"
+            >
+              <a href="/" class="no-underline text-foreground hover:text-primary font-mono text-sm sm:text-base">
+                Go Home
+              </a>
+            </Button>
 
-          <h1 class="text-lg sm:text-2xl font-semibold tracking-tight text-center font-mono px-20 sm:px-0">
-            {frontmatter.title}
-          </h1>
-        </header>
+            <h1 class="text-lg sm:text-2xl font-semibold tracking-tight text-center font-mono px-20 sm:px-0">
+              {frontmatter.title}
+            </h1>
 
-        <Prose class="w-full prose prose-neutral list-outside">
-          <slot />
-        </Prose>
-      </div>
-    </main>
+            <div class="absolute right-0">
+              <ModeToggle client:load />
+            </div>
+          </header>
+
+          <Prose class="w-full prose prose-neutral list-outside">
+            <slot />
+          </Prose>
+        </div>
+      </main>
+    </ThemeProvider>
   </body>
 </html>
