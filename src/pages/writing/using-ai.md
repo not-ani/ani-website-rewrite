@@ -44,7 +44,7 @@ This suggests that you should only use tools like AI agents after you’ve added
 
 But this raises another question: what constitutes deep understanding? Is knowing how the solutions you are implementing work enough? I would argue that it's only a part of it. Going back to the Convex example: I had a good grasp of the problems Convex solved thanks to a series of videos by Theo from [t3.gg](https://t3.gg), explaining why [t3.chat](https://t3.chat) switched to Convex after trying numerous other technologies. That understanding of what necessitated Convex gave me a much more holistic view and made me more informed about why the solution was chosen, not just how.
 
-Yet, I'd argue I would still be missing a key part of the learning process, even after watching Theo’s videos. If we treat experience as a graph, each node has a certain weight, representing the strength of its understanding. If I had been the one trying out different databases for t3.chat and building out those solutions myself, I would not only have a much higher weight on that node but also have more nodes connected to it.
+Yet, I'd argue I would still be missing a key part of the learning process, even after watching Theo’s videos. If we treat experience as a graph, each node has a certain weight, representing the strength of its understanding. If I had taken the time to try out those databases myself, I would not only have a much higher weight on that node but also have more nodes connected to it.
 
 This brings me to my second point:
 
@@ -62,7 +62,7 @@ After I had built a working product, I went back and wrote a version of the proj
 When building these projects by myself, I still use AI, but with a few guidelines that make it possible to use LLMs effectively when learning:
 
 - Use Google and not an LLM directly. Because Google has a pretty decent AI summary for searches, you can look up reference material very quickly without falling into the trap of LLMs giving you too much information.
-- Only use AI after struggling with the problem for a while. I don't mean for simple syntax issues or basic documentation search, but if you want to know what method for rendering something is more performant, build both out in smaller versions and compare. LLMs can give you the end lesson that people have picked up on before, but true competence comes from understanding the circumstances around the solution and what led to it in the first place. The more you can understand those points, the better off you'll be.
+- Only use AI after struggling with the problem for a while. I don't mean for simple syntax issues or basic documentation search, but if you want to know what method for rendering something is more performant, build both out in smaller versions and compare. LLMs can give you the end lesson that people have picked up on before, but not the true competence that comes from understanding the circumstances around the solution and what led to it in the first place.
 
 # Footnotes
 
