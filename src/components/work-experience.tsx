@@ -119,7 +119,7 @@ export function WorkExperience() {
                       ease: [0.22, 1, 0.36, 1],
                       delay: 0.1,
                     }}
-                    className="space-y-3 border-border/40 bg-card/95 p-4 rounded-sm backdrop-blur-sm"
+                    className="space-y-3 border-border/40  p-4 rounded-sm backdrop-blur-sm"
                   >
                     <motion.div
                       initial={{ opacity: 0, y: -4 }}

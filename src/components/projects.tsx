@@ -86,7 +86,7 @@ export function Projects() {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                    className="rounded-sm bg-card p-4"
+                    className="rounded-sm p-4"
                   >
                     <div className="space-y-3">
                       {project.image ? (
